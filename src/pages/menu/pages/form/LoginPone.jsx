@@ -56,9 +56,7 @@ function LoginPone({sidiabrH,setSidibarH,sidibar,setsidibar   }) {
             {sidiabrH && <Sidibar sidibar={sidibar}   setSidibarH={setSidibarH} setsidibar={setsidibar} />}
             <HeaderPhone sidiabrH={sidiabrH}  setSidibarH={setSidibarH}  sidibar={sidibar}  setsidibar={setsidibar} />
             <div className="LoginPone-container text-white">
-            <h3 className="back-icons">
-            <IoIosArrowBack onClick={()=>navigate(-1)} />
-            </h3>
+           
             <h2>
                 Welcome Back
             </h2>
@@ -86,7 +84,9 @@ function LoginPone({sidiabrH,setSidibarH,sidibar,setsidibar   }) {
                     /> : "Login"} 
                     </button>
                 </div>
-                <a href="/reset-password" style={{color:'yellow'}}><span className='text-white'>Forgat</span> Password?</a>
+                <Link to={'/reset-password'}>
+                <a  style={{color:'yellow'}}><span className='text-white'>Forgat</span> Password?</a>
+                </Link> 
                 <p id='copyrite' >Don't have an account ? <span ><Link style={{color:'yellow',textDecoration:'underline'}} to={'/register'}>Sign Up</Link> </span></p>
         </div>
     </div>
