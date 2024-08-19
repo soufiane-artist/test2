@@ -103,7 +103,7 @@ function Login({setLogin,setregister}) {
                             colors={["white","white","white","white","white"]}
                             /> : "Login"} </button>
                                         </div>
-                            <Link to={'/reset-password/k6dsf56/65sdfe'}>
+                            <Link to={'/reset-password'}>
                     <p style={{cursor:'pointer'}}>Forget <span style={{color:'rgb(0, 0, 119)',fontWeight:'600'}}>Password!</span></p>
                             </Link>
                     </div>               
