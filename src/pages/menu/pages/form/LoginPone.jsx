@@ -46,8 +46,8 @@ function LoginPone({sidiabrH,setSidibarH,sidibar,setsidibar   }) {
         await dispatch(LoginUser({email,password}))
         setTimeout(()=>{
             setLoading(false)
-            navigate('/')
-        },3000)
+            window.location.reload()
+        },1000)
     }
 
 
