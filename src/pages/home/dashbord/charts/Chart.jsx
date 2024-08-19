@@ -28,7 +28,7 @@ function Chart({lineSeriesCh,histogramSeriesCh,baselineSeriesCH,areaSeriesChart,
   
   const socket = useRef()
   useEffect(()=>{
-    socket.current = io ('http://localhost:2002')
+    socket.current = io ('https://backend-lfin.onrender.com')
     socket.current.emit('add-user',user?._id)
     return ()=>{
         socket.current.off('onlineUsers')
