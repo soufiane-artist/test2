@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import axios from 'axios'
 import { io } from 'socket.io-client';
 import { toast } from 'react-toastify';
-function DealNotif({value,data,socket,setAccount,userAdmin ,setUserAdmin,setMont}) {
+function DealNotif({value,data,socket,setAccount,userAdmin ,setUserAdmin,setMont,setLoading}) {
 
   
   const [user,setUser] = useState(JSON.parse(localStorage.getItem('userInfo')))
@@ -33,6 +33,7 @@ function DealNotif({value,data,socket,setAccount,userAdmin ,setUserAdmin,setMont
   },[])
 
   const closeDeal = async(id,openPrice,buy,volume,name)=>{
+    setLoading(true)
     if(value+'USDT' === name ){
       await axios.put(`${process.env.REACT_APP_API_URL}/deals/`+id,{
         closePrice:data.close,

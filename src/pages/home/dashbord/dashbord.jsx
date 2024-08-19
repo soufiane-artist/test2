@@ -125,7 +125,7 @@ function Dashbord({}) {
       {account && <AccountUser SetEditProf={SetEditProf} setAccount={setAccount} user={user} />}
       {Desposit &&  <Wallet setAccount={setDesposit} user={user} />}
       {Notif && <Notification setAccount={setNotif} user={user} />}
-      {DealNotifCation && <DealNotif value={value}  socket={socket} setMont={setMont}  userAdmin={userAdmin} setUserAdmin={setAdmin} data={data} setAccount={setDealNotif} />}
+      {DealNotifCation && <DealNotif setLoading={setLoading} value={value}  socket={socket} setMont={setMont}  userAdmin={userAdmin} setUserAdmin={setAdmin} data={data} setAccount={setDealNotif} />}
       {support && <Support setAccount={setSupport} user={user} />}
       {Balancei && <Balance setBalance={setBalance} />}
       {EditProf && <EditProfile  setMont={setMont} setAccount={SetEditProf} set SetEditProf={SetEditProf} />}
