@@ -12,6 +12,7 @@ function VerFyEmail() {
     const query = new URLSearchParams(useLocation().search);
     const userId = query.get('userId');
     const token = query.get('token');
+    const token2 = query.get('token');
 
     console.log(userId);
     console.log(token);
