@@ -1,4 +1,4 @@
-import {BrowserRouter,Route,Routes} from 'react-router-dom'
+import {BrowserRouter as Router,Route,Routes} from 'react-router-dom'
 import Menu from './pages/menu/Menu';
 import PhoneLogin from './pages/menu/pages/PhonePage/PhoneLogin';
 import LoginPone from './pages/menu/pages/form/LoginPone';
@@ -38,7 +38,7 @@ function App() {
 
 
   return (
-    <BrowserRouter>
+    <Router>
     <ToastContainer />
     <Routes>
       <Route path='*' element={user ? <Dashbord  /> : <Menu sidiabrH={sidiabrH}  setSidibarH={setSidibarH}  sidibar={sidibar}  setsidibar={setsidibar} />} />
@@ -62,7 +62,7 @@ function App() {
       <Route path='/reset-password/' element={<ForgatEmail/>}/>
       <Route path='/reset-password/:userId/:token' element={<ResetPass/>} />
     </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
