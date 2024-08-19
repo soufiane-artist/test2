@@ -44,7 +44,7 @@ function App() {
       <Route path='*' element={user ? <Dashbord  /> : <Menu sidiabrH={sidiabrH}  setSidibarH={setSidibarH}  sidibar={sidibar}  setsidibar={setsidibar} />} />
       <Route path='/' element={user ? <Dashbord  /> : <Menu sidiabrH={sidiabrH}  setSidibarH={setSidibarH}  sidibar={sidibar}  setsidibar={setsidibar} />} />
       <Route path='/Login' element={!user ? <LoginPone sidiabrH={sidiabrH}  setSidibarH={setSidibarH}  sidibar={sidibar}  setsidibar={setsidibar}  /> : <Dashbord/>} />
-      <Route path='/Register' element={window.innerWidth < 700 ? <RegisterPhone sidiabrH={sidiabrH}  setSidibarH={setSidibarH}  sidibar={sidibar}  setsidibar={setsidibar} /> : <Menu/>} />
+      <Route path='/Register' element={!user ? <RegisterPhone sidiabrH={sidiabrH}  setSidibarH={setSidibarH}  sidibar={sidibar}  setsidibar={setsidibar} /> : <Dashbord/>} />
       <Route path='/About' element={<About/>} />
       <Route path='/Service' element={<Service/>} />
       <Route path='/Dashbord' element={user?.verfyEmail ? <Dashbord user={userAdmin} /> :window.innerWidth < 700 ? <LoginPone sidiabrH={sidiabrH}  setSidibarH={setSidibarH}  sidibar={sidibar}  setsidibar={setsidibar}  /> : <Menu />  } />
