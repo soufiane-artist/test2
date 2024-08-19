@@ -58,7 +58,7 @@ function App() {
       <Route path='/Dashbord/Pull/Skrill' element={user?.verfyEmail && <SkrillPull  imgBank={imgBank}/>} />
       <Route path='/Dashbord/Pull/Paypal' element={user?.verfyEmail && <PaypalPull  imgBank={imgBank}/>} />
       <Route path='/Dashbord/Pull/' element={user?.verfyEmail && <BanksPull setImgBank={setImgBank} />} />
-      <Route path='/:userId/verify/:token' element={<VerFyEmail/>} />
+      <Route path='/VerFyEmail/:userId/verify/:token' element={<VerFyEmail/>} />
       <Route path='/reset-password/' element={<ForgatEmail/>}/>
       <Route path='/reset-password/:userId/:token' element={<ResetPass/>} />
     </Routes>
